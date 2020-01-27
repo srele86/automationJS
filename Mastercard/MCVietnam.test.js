@@ -11,7 +11,7 @@ describe('MC Vietnam test', ()=>{
   await page.screenshot({path : "mastercardProfile.png"});
 
   const url = 'https://mastercardidps.staging-idp.com/user/login';
-  await page.waitFor(4000);
+  await page.waitFor(5000);
 
   await page.goto(url);
 
