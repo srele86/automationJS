@@ -8,7 +8,8 @@ describe('MC Vietnam test', ()=>{
         });
 
   const page = await browser.newPage()
-    
+  await page.screenshot({path : "mastercardProfile.png"});
+
   const url = 'https://mastercardidps.staging-idp.com/user/login';
   await page.waitFor(4000);
 
