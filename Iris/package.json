@@ -1,0 +1,17 @@
+{
+  "name": "puppeteerdemo",
+  "version": "1.0.0",
+  "description": "Iris Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Srele",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
