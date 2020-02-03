@@ -1,4 +1,6 @@
 const puppeteer = require('puppeteer');
+//npm teconst expect = require('chai').expect;
+
 
 jest.setTimeout(80000);
 describe('MastercardIdps test', ()=>{
@@ -6,20 +8,23 @@ describe('MastercardIdps test', ()=>{
         const browser = await puppeteer.launch({
             headless : false
                   });
-
+                  
   const page = await browser.newPage()
-    
+  await page.setViewport({ width: 1280, height: 1800 })
+
+  
   const url = 'https://mastercardidps.staging-idp.com/user/login';
   await page.waitFor(4000);
 
   await page.goto(url);
+  
 
   await page.type('input[id="username"]', 'Sreten.Sesic192020229@us.generaliglobalassistance.com');
   await page.type('input[id="password"]', 'P@assword1');
   await page.click('input[id="saveButton"]');
   await page.waitFor(10000);
 
-  //await page.waitForNavigation({ waitUntil : 'load'});
+  await page.waitForNavigation({ waitUntil : 'load'});
   
   await page.click('button[aria-label="My Account"]');
   await page.waitFor(4000);
